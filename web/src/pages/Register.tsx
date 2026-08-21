@@ -1,4 +1,5 @@
 import { useState, type ChangeEvent } from "react";
+import { Link } from "react-router-dom";
 
 function Register () {
 
@@ -26,10 +27,11 @@ function Register () {
     }
 
 
-    const newUserObject: string = JSON.stringify({ firstName, lastName, username, password });
+    
 
 
     const sendCreds = (): void => {
+        const newUserObject: string = JSON.stringify({ firstName, lastName, username, password });
         console.log(`Creds Passed! First Name = ${newUserObject}`);
     };
 
@@ -65,7 +67,10 @@ function Register () {
                 value={password}
                 onChange = {handlePasswordChange}
             />
-            <button id = "submitCreds" onClick={sendCreds}>Submit</button>
+
+            <button onClick = {sendCreds}>Submit</button>
+
+            <Link to="/Login">Already Have an Account? Log In Here</Link>
         </>
     )
 }
