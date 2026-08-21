@@ -1,8 +1,12 @@
-import { useState } from "react";
+import { useState, type ChangeEvent } from "react";
 
 function Login () {
 
     const [username, setUsername] = useState("")
+
+    const handleUsernameChange = (event:ChangeEvent<HTMLInputElement>) : void => {
+        setUsername(event.target.value)
+    }
 
     return (
         <>
@@ -10,7 +14,7 @@ function Login () {
                 type = "text"
                 placeholder = "Username"
                 value = {username}
-                onChange = {setUsername}
+                onChange = {handleUsernameChange}
 
             
             />
