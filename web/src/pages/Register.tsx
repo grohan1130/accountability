@@ -26,10 +26,7 @@ function Register () {
         setPassword(event.target.value)
     }
 
-
     
-
-
     const sendCreds = (): void => {
         const newUserObject: string = JSON.stringify({ firstName, lastName, username, password });
         console.log(`Creds Passed! First Name = ${newUserObject}`);
