@@ -14,7 +14,7 @@ From the repo root (`streaks/`):
 
 | From | Host | Port |
 |---|---|---|
-| Your machine (FastAPI, psql, desktop clients) | `localhost` | `POSTGRES_DB_PORT` (default `5433`) |
+| Your machine (FastAPI, psql, desktop clients) | `localhost` | `POSTGRES_DB_PORT` (default `5432`) |
 | Inside Docker (pgAdmin) | `db` | `5432` |
 
 **pgAdmin:** open `http://localhost:5050`, log in with `PGADMIN_DEFAULT_EMAIL` / `PGADMIN_DEFAULT_PASSWORD`, then **Register → Server** using host `db`, port `5432`, and the `POSTGRES_*` credentials.
